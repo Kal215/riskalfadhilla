@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+    <title>Tugas13</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+
+<style type="text/css">
+    body { background-image:url(tb0.jpg); 
+background-size:cover; 
+background-attachment: fixed; } 
+p{ color:rgb(0, 0, 0); } 
+
+.left    { text-align: left;}
+.right   { text-align: right;}
+.center  { text-align: center;}
+.justify { text-align: justify;}
+
+
+.icons{
+    display: flex;
+    column-gap: 25px;
+}
+.icon{
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 26px;
+    color: #fff;
+    border-radius: 50%;
+    outline: 2px solid #fff;
+    transition-property: 
+    outline-offset, outline-color, background-color;
+    transition-duration: .25s;
+}
+.icon-hover{
+    outline-offset: 4px;
+
+}
+.icon-hover i{
+    animation: shake .25s;
+}
+.icon-hover--instagram:hover {
+    background-image: ;
+    radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fdf497 45%, #fdf497 60%, #fdf497 90%);
+    outline-color: #a02d76;
+}
+.icon--facebook:hover{
+    background-color: #0077b5;
+    outline-color: #0077b5;
+}
+@keyframes shake {
+    10%{transform: rotate(15deg):}
+    20%{transform: rotate(-15deg):}
+    30%{transform: rotate(15deg):}
+    40%{transform: rotate(-15deg):}
+}
+
+</style>
+<body>
+    <div>
+        <div class="w3-container w3-black w3-card-4">
+            <h1>The Beatles</h1>
+    </div>
+
+    <div class="w3-card-4">
+        <img src="tb1.jpg" width="100%" height="250px" > 
+    </div>
+
+    <div class="w3-bar" style="color: #B22222; background-color: black;">
+        <button class="w3-bar-item w3-button" onclick="openKota('Home')">Home</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('Top')">John Lennon</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('Bottom')">Paul McCartney</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('Right')">George Harrison</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('Left')">Ringo Starr</button>
+        
+        <!- Membuat dropdown menu ->
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">More▼</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <button class="w3-bar-item w3-button" onclick="openKota('Lagu')">Top Song of The Beatles</button>
+                <button class="w3-bar-item w3-button" onclick="openKota('lagu2')">About Me</button>
+                
+           </div>
+        </div>
+        <!- End dropdown menu ->
+
+    </div>
+
+    <div id="Home" class="w3-container kota w3-center " style="display:block">
+        <center>
+            <h1>
+              <b>Welcome</b> 
+            </h1>
+            <img src="tb2.jpg" width="300px" height="250px" > 
+        </center>
+        <p class="left">
+        <strong>
+            The Beatles adalah kelompok pemusik Inggris beraliran rock, dibentuk di Liverpool pada tahun 1960, sering kali dianggap sebagai pemusik tersukses secara komersial dan paling banyak mendapat pujian dalam musik populer. Sejak tahun 1962, kelompok ini terdiri dari John Lennon (gitar pengiring, vokal), Paul McCartney (gitar bass, vokal), George Harrison (gitar melodi, vokal), Ringo Starr (drum, vokal). Bermula dari aliran skiffle dan rock and roll 1950-an, kelompok ini nantinya memainkan musik dalam berbagai genre mulai dari folk rock sampai rock psikedelik, memasukkan juga unsur musik klasik dan elemen lain dengan cara inovatif. The Beatles dipandang sebagai perwujudan ide-ide progresif, berpengaruh terhadap revolusi sosial budaya pada dekade 60-an.
+        </strong>
+        </p>
+    </div>
+<center>
+    
+    <div id="Top" class="w3-container kota w3-animate-top" style="display:none">
+        <center>
+            <h1>
+                <b>
+                John Lennon
+                </b>
+            </h1>
+                <img src="john.jpg" style="width:50%">
+                <p class="left">
+                <strong>
+                    Bernama Lengkap John Winston Lennon, ia lahir di Liverpool, Inggris, 9 Oktober 1940 dan wafat di New York City, Amerika Serikat, 8 Desember 1980 pada umur 40 tahun. Ia paling dikenal sebagai penyanyi, pencipta lagu, instrumentalis, penulis, dan aktivis politik yang terkenal di seluruh dunia sebagai pemimpin dari The Beatles. Lennon dan Paul McCartney membentuk partnership pencipta lagu yang paling sukses dan berhasil hingga saat ini. Lennon dengan sinismenya dan mcCartney dengan optimismenya melengkapi satu sama lain dengan sangat baik.
+                </strong>    
+                </p>
+        </div>
+        
+        <div id="Bottom" class="w3-container kota w3-animate-zoom" style="display:none">
+            <h1>
+             <b>Paul McCartney</b>
+            </h1>
+            <img src="paul.jpeg" style="width: 50%;">
+            <p class="left">
+                <strong>
+                    Paul McCartney (lahir 18 Juni 1942) adalah seorang penyanyi / penulis lagu Inggris dan anggota kunci The Beatles. Setelah The Beatles berpisah pada tahun 1970, ia mengejar karier solonya yang sukses, merekam dengan berbagai artis, termasuk grupnya ‘The Wings’. Menurut Guinness Book of Records, ia adalah artis terlaris sepanjang masa.
+                </strong>
+            </p>
+        </div>
+
+        <div id="Right" class="w3-container kota w3-animate-right " style="display:none">
+            <h1>
+                <b>
+                    George Harrison
+                </b>
+            </h1>
+            <img src="george.jpg" style="width:30%">
+            <p class="left">
+                <strong>
+                    George Harrison MBE (lahir di Wavertree, Liverpool, Inggris, 25 Februari 1943 – meninggal di Los Angeles, Kalifornia, Amerika Serikat, 29 November 2001 pada umur 58 tahun) adalah musisi, penyanyi, penulis lagu dan produser film Britania Raya. Beliau paling dikenal sebagai gitaris grup musik The Beatles.
+                </strong>
+            </p>
+        </div>
+
+        <div id="Left" class="w3-container kota w3-animate-left" style="display:none">
+            <h1>
+                <b>
+                    Ringo Starr
+                </b>
+            </h1>
+            <img src="ringo.jpg" style="width:30%">
+            <p class="left">
+                <strong>
+                    Sir Richard Starkey, MBE (lahir 7 Juli 1940), dikenal dengan nama panggungnya Ringo Starr, adalah musikus terkenal dari Britania Raya, paling populer sebagai drummer The Beatles. Ia bergabung dengan The Beatles pada tahun 1962.
+
+Sebagai seorang drummer, Starr dikenal kreatif, dan kontribusinya pada band mendapat pujian dari banyak drummer profresional. Tahun 2011, ia mendapat peringkat kelima dalam polling Rolling Stones untuk 100 drummer terbaik sepanjang masa.    
+                </strong>
+            </p>
+        </div>
+        
+        <div id="lagu2" class="w3-container w3-animate-fading" style="display: none;">
+            <h1><b>Profile</b></h1>
+            <img src="kal.jpg" width="300px" height="450px"> 
+            <table>
+                <tr>
+                    <td>
+                        <p class="justify" style="font-size: 30px;">
+                            Nama    : Muhammad Riskal Fadhilla<br>
+                            Kelas   : IF-6<br>
+                            NIM     : 10122487
+                        </p>          
+                    </td>
+                </tr>
+            </table>
+            <div class="icons">
+                <a href="https://www.instagram.com/nvcxz.___/?hl=id" class="icon icon-hover--instagram">
+                    <i class="ri-instagram-line"><img src="insta.png" alt="" width="30px" height="30px"></i>
+                </a>
+            </div><br>
+            <div class="icons">
+                <a href="https://www.facebook.com/riskal.fadhilla.7/" class="icon icon-hover--facebook"><img src="f.png" alt="" width="30px" height="30px">
+                    <i class="ri-facebook-line"></i>
+                </a>
+            </div>
+        </div>
+
+        <div id="Lagu" class="w3-container" style="display: none;">
+            <div>
+            <h1><b>4 Greatest The Beatles Songs</b></h1>
+            <strong>   
+            <h2><b>Hey jude</b></h2>
+               <audio controls="true">
+                    <source src="jude.mp3" type="audio/mpeg">
+                    Mohon maaf Browsermu tidak mendukung audio, terimakasih.
+                </audio>
+                <details>
+                    <summary>View Lyrics</summary>
+                    <p allign="left" style="color: yellow;">
+                        Hey Jude, don't make it bad.<br>
+                        Take a sad song and make it better.<br>
+                        Remember to let her into your heart,
+                        Then you can start to make it better.<br>
+                        <br>
+                        <br>
+                        Hey Jude, don't be afraid.<br>
+                        You were made to go out and get her.<br>
+                        The minute you let her under your skin,
+                        Then you begin to make it better.<br>
+                        <br>
+                        <br>
+                        And anytime you feel the pain, hey Jude, refrain,<br>
+                        Don't carry the world upon your shoulders.<br>
+                        For well you know that it's a fool who plays it cool<br>
+                        By making his world a little colder.<br>
+                        <br>
+                        <br>
+                        Hey Jude, don't let me down.<br>
+                        You have found her, now go and get her.<br>
+                        Remember to let her into your heart,<br>
+                        Then you can start to make it better.<br>
+                        So let it out and let it in, hey Jude, begin,<br>
+                        You're waiting for someone to perform with.<br>
+                        And don't you know that it's just you, hey Jude, you'll do,<br>
+                        The movement you need is on your shoulder.<br>
+                        <br>
+                        <br>
+                        Hey Jude, don't make it bad.<br>
+                        Take a sad song and make it better.<br>
+                        Remember to let her under your skin,<br>
+                        Then you'll begin to make it<br>
+                        Better better better better better better, oh.<br>
+                        Na na na nananana, nannana, hey Jude...
+                    </p>
+                </details>
+            </div>
+
+            <div>
+                <h2><b>Yesterday</b></h2>
+                <audio controls="true">
+                     <source src="yesterday.mp3" type="audio/mpeg">
+                     Mohon maaf Browsermu tidak mendukung audio, terimakasih.
+                 </audio>
+                 <details>
+                    <summary>View Lyrics</summary>
+                    <p allign="left" style="color: yellow;">
+                        Yesterday<br>
+                        All my troubles seemed so far away<br>
+                        Now it looks as though they're here to stay<br>
+                        Oh, I believe in yesterday<br>
+                        <br>
+                        Suddenly<br>
+                        I'm not half the man I used to be<br>
+                        There's a shadow hanging over me<br>
+                        Oh, yesterday came suddenly<br>
+                        <br>
+                        Why she had to go<br>
+                        I don't know, she wouldn't say<br>
+                        I said something wrong<br>
+                        Now I long for yesterday<br>
+                        <br>
+                        Yesterday<br>
+                        Love was such an easy game to play<br>
+                        Now I need a place to hide away<br>
+                        Oh, I believe in yesterday<br>
+                        <br>
+                        Why she had to go<br>
+                        I don't know, she wouldn't say<br>
+                        I said something wrong<br>
+                        Now I long for yesterday<br>
+                        <br>
+                        Yesterday<br>
+                        Love was such an easy game to play<br>
+                        Now I need a place to hide away<br>
+                        Oh, I believe in yesterday<br>
+                        <br>
+                        Mmm-mmm-mmm-mmm-mmm, hmm-hmm.
+                    </p>
+            </div>
+
+            <div>
+                <h2><b>Let it be</b></h2>
+                <audio controls="true">
+                    <source src="let.mp3" type="audio/mpeg">
+                    Mohon maaf Browsermu tidak mendukung audio, terimakasih.
+                </audio>
+                <details>
+                    <summary>View Lyrics</summary>
+                    <p allign="left" style="color: yellow;">
+                        When I find myself in times of trouble, Mother Mary comes to me<br>
+                        Speaking words of wisdom, let it be<br>
+                        And in my hour of darkness she is standing right in front of me<br>
+                        Speaking words of wisdom, let it be<br>
+                        Let it be, let it be, let it be, let it be<br>
+                        Whisper words of wisdom, let it be<br>
+                        <br>
+                        <br>
+                        And when the broken hearted people living in the world agree<br>
+                        There will be an answer, let it be<br>
+                        For though they may be parted, there is still a chance that they will see<br>
+                        There will be an answer, let it be<br>
+                        Let it be, let it be, let it be, let it be<br>
+                        There will be an answer, let it be<br>
+                        <br>
+                        <br>
+                        Let it be, let it be, let it be, let it be<br>
+                        Whisper words of wisdom, let it be<br>
+                        Let it be, let it be, let it be, let it be<br>
+                        Whisper words of wisdom, let it be, be<br>
+                        <br>
+                        <br>
+                        And when the night is cloudy there is still a light that shines on me<br>
+                        Shinin' until tomorrow, let it be<br>
+                        I wake up to the sound of music, Mother Mary comes to me<br>
+                        Speaking words of wisdom, let it be<br>
+                        <br>
+                        <br>
+                        And let it be, let it be, let it be, let it be<br>
+                        Whisper words of wisdom, let it be<br>
+                        And let it be, let it be, let it be, let it be<br>
+                        Whisper words of wisdom, let it be.
+                    </p>
+                </div>
+                
+                <div>
+                    <h2><b>ob-la-di, ob-la-da</b></h2>
+                    <audio controls="true">
+                        <source src="obla.mp3" type="audio/mpeg">
+                        Mohon maaf Browsermu tidak mendukung audio, terimakasih.
+                    </audio>
+                    <details>
+                        <summary>View Lyrics</summary>
+                        <p allign="left" style="color: yellow;">
+                            Desmond has a barrow in the marketplace<br>
+                            Molly is the singer in a band<br>
+                            Desmond says to Molly, "Girl, I like your face"<br>
+                            And Molly says this as she takes him by the hand<br>
+                            <br>
+                            Ob-la-di, ob-la-da<br>
+                            Life goes on, brah<br>
+                            La, la, how the life goes on<br>
+                            <br>
+                            Ob-la-di, ob-la-da<br>
+                            Life goes on, brah<br>
+                            La, la, how the life goes on<br>
+                            <br>
+                            Desmond takes a trolley to the jeweler's store<br>
+                            Buys a 20 carat golden ring (ring)<br>
+                            Takes it back to Molly waiting at the door<br>
+                            And as he gives it to her, she begins to sing (sing)<br>
+                            <br>
+                            Ob-la-di, ob-la-da (la, la, la, la, la, la)<br>
+                            Life goes on, brah (la, la, la, la, la, la)<br>
+                            La, la, how the life goes on<br>
+                            <br>
+                            Ob-la-di, ob-la-da (la, la, la, la, la, la)<br>
+                            Life goes on, brah (la, la, la, la, la, la)<br>
+                            La, la, how the life goes on (yeah)<br>
+                            <br>
+                            In a couple of years<br>
+                            They have built a home, sweet home<br>
+                            With a couple of kids running in the yard<br>
+                            Of Desmond and Molly Jones (ha-ha-ha-ha-ha-ha)<br>
+                            <br>
+                            Happy ever after in the market place<br>
+                            Desmond lets the children lend a hand (arm, leg)<br>
+                            Molly stays at home and does her pretty face<br>
+                            And in the evening, she still sings it with the band (yes)<br>
+                            <br>
+                            Ob-la-di, ob-la-da<br>
+                            Life goes on, brah<br>
+                            La, la, how the life goes on (hey)<br>
+                            Ob-la-di, ob-la-da<br>
+                            Life goes on, brah<br>
+                            La, la, how the life goes on<br>
+                            <br>
+                            In a couple of years<br>
+                            They have built a home, sweet home<br>
+                            With a couple of kids running in the yard<br>
+                            Of Desmond and Molly Jones (hey)<br>
+                            <br>
+                            Happy ever after in the market place<br>
+                            Molly lets the children lend a hand<br>
+                            Desmond stays at home and does his pretty face<br>
+                            And in the evening, she's a singer with the band (yeah)<br>
+                            <br>
+                            Ob-la-di, ob-la-da<br>
+                            Life goes on, brah<br>
+                            La, la, how the life goes on (hey)<br>
+                            Ob-la-di, ob-la-da<br>
+                            Life goes on, brah<br>
+                            La, la, how the life goes on<br>
+                            <br>
+                            And if you want some fun<br>
+                            Take Ob-la-di-bla-da<br>
+                            Thank you.
+                        </p>
+                </div>
+        </strong>
+            
+            </div>
+        </div> 
+</center>
+    <script>
+        function openKota(namakota) {
+            var i;
+            var x = document.getElementsByClassName("kota");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(namakota).style.display = "block";
+        }
+    </script>
+</body>
+</html>
